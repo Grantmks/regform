@@ -7,46 +7,52 @@
 <h1>Register</h1>
 
 <form>
-    First Name:<input type="text" placeholder="First Name" required></input>
-    Last Name:<input type="text" placeholder="Last Name" required></input>
-    <br>
+    <label for="first">First Name:</label>
+    <input type="text" placeholder="First Name" required></input>
+    <label for="last">Last Name:</label>
+    <input type="text" placeholder="Last Name" required></input>
+    <div>
         <label for="Male">Male: </label>
-        <input name="sexchoice" id="Male" type="radio"></input>
+        <input name="sexchoice" id="Male" type="radio" value="male"></input>
         <label for="Female">Female: </label>
-        <input name="sexchoice" id="Female" type="radio"></input> 
+        <input name="sexchoice" id="Female" type="radio" value="female"></input> 
         <label for="Other">Other: </label>
-        <input name="sexchoice" id="Other" type="radio"></input>
-           <br> 
+        <input name="sexchoice" id="Other" type="radio" value="other"></input>
+    </div> 
+            <div>
             Email:<input type="email" placeholder="Email" required></input> 
-            Password:<input type="password" placeholder="Password" required></input> 
-            <br>
-    
-    Birthday
-    <select>
-        <option>Jan</option>
-        <option>Feb</option>
-        <option>March</option>
-    </select>
-    
-    <select>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-    </select>
-    
-    <select>
-        <option>1991</option>
-        <option>1992</option>
-        <option>1993</option>
-    </select>
-    <br>
-    I agree to the terms and conditions<input type="radio"></input> 
-    
-    
-    <br>
-    
-    <button>Submit</button>
-    
+            Password:<input name="password" type="password" placeholder="Password" pattern=".{5,10}" required title="5 to 10 characters"></input> 
+            </div>
+    <div>
+        Birthday
+            <label>
+                <select name="month">
+                    <option>Month</option>
+                    <option>Jan</option>
+                    <option>Feb</option>
+                    <option>March</option>
+                </select>
+                
+                <select name="day">
+                    <option>Day</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+                
+                <select name="year">
+                    <option>Year</option>
+                    <option>1991</option>
+                    <option>1992</option>
+                    <option>1993</option>
+                </select>
+            </label>
+    </div>
+            <div>
+                <label for="agreed">I agree to the terms and conditions</label>
+                <input type="checkbox" id="agreed" name="agreed"></input> 
+             </div>
+             <input type= "submit">
 </form>
     </body>
 </html>
